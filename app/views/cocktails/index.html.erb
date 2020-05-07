@@ -4,8 +4,8 @@
 <div class="card-deck">
   <% @cocktails.each do |cocktail| %>
     <div class="card">
-      <img class="card-img-top" src='app/assets/images/slide1.jpg' alt="Card image cap">
-      <div class="card-body">
+   <%= image_tag("mojito.jpg" ,class: "card-img-top", width:'200', height:'350' ) %>
+        <div class="card-body">
         <h5 class="card-title"><%= cocktail.name  %></h5>
 <!--         <p class="card-text">Cocktails description</p> -->
         <a><%= link_to 'More', cocktail, class: "btn btn-info" %></a>
@@ -15,6 +15,10 @@
 </div>
 
 
-<%= link_to "Add a cocktail", new_cocktail_path %>
-
-
+<div class="button_container">
+  <div class="row">
+    <div class="col text-center">
+      <%= link_to "Add a cocktail", new_cocktail_path, class:"btn btn-outline-success"%>
+    </div>
+  </div>
+</div>

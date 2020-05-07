@@ -1,7 +1,9 @@
 <%= render "utilities/nav" %>
-<h1>Create a new cocktail</h1>
+<div class="new_container">
+  <h2>Create a new cocktail</h2>
 
-<%= simple_form_for @cocktail do |f| %>
-  <%= f.input :name %>
-  <%= f.button :submit, class: 'btn btn-primary' %>
-  <% end %>
+  <%= simple_form_for @cocktail do |f| %>
+    <%= f.input :name %>
+    <%= f.button :submit, class: 'btn btn-primary' %>
+    <% end %>
+</div>
